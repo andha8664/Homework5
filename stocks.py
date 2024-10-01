@@ -23,7 +23,7 @@ def return_snowflake_conn():
 @task
 def extract(url):
     f = requests.get(url)
-    return (f.text)
+    return (f.json())
 
 
 @task
